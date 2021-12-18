@@ -26,20 +26,41 @@ body{
     float: left;
     margin-top: 50px;
     border-radius: 20px;
+    position: relative;
+    transition: all .4s;
+    display: flex;
+    justify-content: center;
 }
-.slidearea .box img:hover{
-    transform: translateY(-40px);
-}
+
 .slidearea .box img{
     width:100%;
     height:100%;
-    transition: transform 1s ease-OUT;
+    /* transition: transform 1s ease-OUT; */
     border-radius: 20px;
+    z-index: 10;
+    transition: all .4s;
 }
-.slidearea .box h3{
+.slidearea .box:hover img{
+    margin-top: -30px;
+}
+.slidearea .box:hover{
+    /* transform: translateY(-40px); */
+    width: 360px;
+}
+.box::before{
+    content: "THE SHINODU we";
+    position:absolute;
+    bottom: 8px;
+    left: 80px;
+    color: black;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+/* .slidearea .box h3{
     margin-top: -40px;
     
-}
+} */
 .boxarea{
     width:100% ;
     height: 600px;
@@ -83,17 +104,17 @@ body{
     text-align: center;
     margin-top: 10px;
 }
-.darea .box{
+.darea .box1{
     width: 330px;
     height: 350px;
     background: chartreuse;
     float:left;
    margin-top: 40px;
 }
-.darea .box:hover{
+.darea .box1:hover{
     box-shadow: 1px 1px 6px 4px rgba(147,33,163,0.75);
 }
-.darea .box img{
+.darea .box1 img{
     width: 100%;
     height: 100%;
 }
@@ -104,25 +125,13 @@ body{
     margin-top: 30px;
 }
 .down1area{
-    height: 600px;
-    background: chartreuse;
+    height: 400px;
+    background: url('img/footer.jpg');
+    background-size: cover;
+    margin-bottom: 20px;
 }
-.down1area .left{
-    width: 100%;
-    height: 600px;
-    background: lemonchiffon;
-    float: left;
-}
-.down1area .right{
-    width: 100%;
-    height: 600px;
-    background: teal;
-    float: left;
-}
-.down1area .right .box{
-    width: 200px;
-    height: 200px;
-    background: thistle;
-    float: left;
-    margin: 5px;
+.footerarea{
+    height:600px ;
+    background:url('img/p10.jpg');
+    background-size: cover;
 }
